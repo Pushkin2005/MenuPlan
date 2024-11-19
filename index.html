@@ -1,157 +1,32 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ChevronRight, Utensils, Users, LineChart, Leaf } from 'lucide-react'
-import Image from "next/image"
-
-export default function LandingPage() {
-  return (
-    <div className="flex flex-col min-h-screen bg-[#FFFDE7]">
-      <header className="bg-[#1B5E20] text-white p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-09-27%20211412-jEj9NvdGRmxDshynqYewjFMpz4sy86.png"
-              alt="MenuPlan Logo"
-              width={50}
-              height={50}
-              className="rounded-full"
-            />
-            <span className="text-2xl font-bold">MenuPlan</span>
-          </div>
-          <nav>
-            <ul className="flex space-x-4">
-              <li><a href="#features" className="hover:text-[#FFEB3B]">Features</a></li>
-              <li><a href="#about" className="hover:text-[#FFEB3B]">About</a></li>
-              <li><a href="#contact" className="hover:text-[#FFEB3B]">Contact</a></li>
-            </ul>
-          </nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenuPlan - Revolutionize Hostel Meal Planning</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-09-27%20211412-jEj9NvdGRmxDshynqYewjFMpz4sy86.png" alt="MenuPlan Logo" width="50" height="50">
+                <span>MenuPlan</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-      </header>
+    </header>
 
-      <main className="flex-grow">
-        <section className="bg-[#1B5E20] text-white py-20">
-          <div className="container mx-auto text-center">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-09-27%20211412-jEj9NvdGRmxDshynqYewjFMpz4sy86.png"
-              alt="MenuPlan Logo"
-              width={150}
-              height={150}
-              className="mx-auto mb-8"
-            />
-            <h2 className="text-4xl font-bold mb-4">Revolutionize Hostel Meal Planning</h2>
-            <p className="text-xl mb-8">Connect mess owners with certified dieticians for healthier, happier students</p>
-            <Button className="bg-[#D32F2F] hover:bg-[#B71C1C] text-white">Get Started <ChevronRight className="ml-2 h-4 w-4" /></Button>
-          </div>
-        </section>
-
-        <section id="features" className="py-16">
-          <div className="container mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12 text-[#1B5E20]">Key Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                { 
-                  title: "Dietician Collaboration", 
-                  description: "Virtual consultations and custom meal plans", 
-                  icon: <Users className="h-10 w-10 text-[#1B5E20]" />,
-                  image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dietician%20Stock%20Image-1uqhTuHxdrcDueYc8G4xWL1gRMjyH6.jpeg"
-                },
-                { 
-                  title: "Menu Planning Interface", 
-                  description: "User-friendly dashboard with nutritional analysis", 
-                  icon: <Utensils className="h-10 w-10 text-[#1B5E20]" />,
-                  image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Menu%20Card%20Stock%20Image.jpg-smQHIOqncy34OMkLb6PJIZCizomFOH.jpeg"
-                },
-                { 
-                  title: "Student Feedback System", 
-                  description: "Collect and analyze student preferences", 
-                  icon: <LineChart className="h-10 w-10 text-[#1B5E20]" />,
-                  image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Student%20Group%20Stock%20Image.jpg-eVeMwNe3JYwzUY008fFDxbgJexQhRO.jpeg"
-                },
-                { 
-                  title: "Nutritional Compliance", 
-                  description: "Adhere to health standards and guidelines", 
-                  icon: <Leaf className="h-10 w-10 text-[#1B5E20]" />,
-                  image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Nutrition%20Stock%20Image-Ci6yaFUr6pEBj2ZOZ8HgRjrrk4u4Ea.jpeg"
-                },
-              ].map((feature, index) => (
-                <Card key={index} className="bg-white">
-                  <CardHeader>
-                    <CardTitle className="flex items-center text-[#1B5E20]">
-                      {feature.icon}
-                      <span className="ml-2">{feature.title}</span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <Image
-                      src={feature.image}
-                      alt={feature.title}
-                      width={300}
-                      height={200}
-                      className="rounded-lg w-full object-cover"
-                    />
-                    <CardDescription>{feature.description}</CardDescription>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="about" className="bg-[#1B5E20] text-white py-16">
-          <div className="container mx-auto">
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="md:w-1/2">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-09-27%20211412-ofS8vxdt96wWIamvrokVAYMUe7KeXh.png"
-                  alt="About MenuPlan"
-                  width={600}
-                  height={400}
-                  className="rounded-lg"
-                />
-              </div>
-              <div className="md:w-1/2">
-                <h2 className="text-3xl font-bold mb-8">About MenuPlan</h2>
-                <p className="text-lg">
-                  MenuPlan is an innovative platform connecting hostel mess owners with certified dieticians to ensure balanced, nutritious meals for students. Our app facilitates meal planning, incorporates student feedback, and adheres to nutritional guidelines, improving student health and satisfaction.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" className="py-16">
-          <div className="container mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8 text-[#1B5E20]">Get in Touch</h2>
-            <p className="mb-8">Interested in revolutionizing your hostel's meal planning? Contact us today!</p>
-            <div className="flex justify-center items-center gap-4">
-              <Button className="bg-[#D32F2F] hover:bg-[#B71C1C] text-white">Contact Us</Button>
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-09-27%20211412-jEj9NvdGRmxDshynqYewjFMpz4sy86.png"
-                alt="MenuPlan Logo"
-                width={60}
-                height={60}
-                className="rounded-full"
-              />
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer className="bg-[#1B5E20] text-white py-8">
-        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center gap-2 mb-4 md:mb-0">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-09-27%20211412-jEj9NvdGRmxDshynqYewjFMpz4sy86.png"
-              alt="MenuPlan Logo"
-              width={40}
-              height={40}
-              className="rounded-full"
-            />
-            <span className="text-xl font-bold">MenuPlan</span>
-          </div>
-          <p>&copy; 2024 MenuPlan. All rights reserved.</p>
-        </div>
-      </footer>
-    </div>
-  )
-}
+    <main>
+        <section class="hero">
+            <div class="container">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202024-09-27%20211412-jEj9NvdGRmxDshynqYewjFMpz4sy86.png" alt="MenuPlan Logo" width="150" height="150">
+                <h1>Revolutionize Hostel Meal Planning</h1>
+                <p>Connect mess owners with certified dieticians for healthier, happier students</p>
+                <button 

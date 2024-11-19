@@ -1,0 +1,174 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFDE7;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #1B5E20;
+    color: white;
+    padding: 1rem 0;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  header nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  header nav a:hover {
+    color: #FFEB3B;
+  }
+  
+  /* Hero Section Styles */
+  .hero {
+    background-color: #1B5E20;
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    background-color: #D32F2F;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #B71C1C;
+  }
+  
+  /* Features Section Styles */
+  .features {
+    padding: 4rem 0;
+  }
+  
+  .features h2 {
+    text-align: center;
+    color: #1B5E20;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .feature-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .feature-card h3 {
+    color: #1B5E20;
+    padding: 1rem;
+    margin: 0;
+  }
+  
+  .feature-card p {
+    padding: 0 1rem 1rem;
+    color: #333;
+  }
+  
+  /* About Section Styles */
+  .about {
+    background-color: #1B5E20;
+    color: white;
+    padding: 4rem 0;
+  }
+  
+  .about .container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .about img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .about-content {
+    flex: 1;
+  }
+  
+  .about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Contact Section Styles */
+  .contact {
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    color: #1B5E20;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #1B5E20;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about .container {
+      flex-direction: column;
+    }
+    
+    .feature-grid {
+      grid-template-columns: 1fr;
+    }
+  }
